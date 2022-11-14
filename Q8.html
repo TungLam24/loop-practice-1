@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="play()">Chơi</button>
+</body>
+</html>
+<script>
+    function play() {
+        let max = prompt("Số bạn muốn đoán trong khoảng lớn nhất là bao nhiêu?");
+        let number = Math.floor(Math.random() * (+max + 1));
+        console.log(number)
+        for (let i = 1; i < 4; i++) {
+            let guess = prompt("Nhập số bạn đoán");
+            if (+guess == number) {
+                alert("Chúc mừng")
+                break
+            } else if (+guess > number) {
+                alert("Số bạn đoán lớn hơn")
+            } else {
+                alert("Số bạn đoán bé hơn")
+            }
+        }
+        alert("Bạn đã hết số lần đoán")
+        document.write("Bạn đã hết số lần đoán")
+    }
+</script>
